@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'toyosaka_app.apps.toyosakaAppConfig',
+    'toyosaka_app.apps.ToyosakaAppConfig',
 ]
 
 MIDDLEWARE = [
