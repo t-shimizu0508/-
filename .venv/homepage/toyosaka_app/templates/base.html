@@ -3,11 +3,12 @@
 <html lang="jp">
   <head>
     <meta charset="UTF-8" />
-    <title>豊栄鉄鋼</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
+  {% block contents %}{% endblock %}
   <body>
     <header>
       <h1><a href="index.html"><img src="images/logo.png" alt="豊栄鉄鋼ロゴ" ></a></h1>
@@ -22,6 +23,9 @@
         </ul>
       </nav>
     </header>
+    {% block header%}{% endblock %}
+    {% block contents %}{% endblock %}
+
     <footer>
       <div id="company_description">
         <p id="company">有限会社豊栄鉄鋼</p>
