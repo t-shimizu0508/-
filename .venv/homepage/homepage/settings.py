@@ -122,3 +122,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_FROM_EMAIL = 'fko2347091@stu.o-hara.ac.jp' # 自分のメールアドレス
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'fko2347091@stu.o-hara.ac.jp' # 自分のメールアドレス
+EMAIL_HOST_PASSWORD = 'Sasami1101' # 自分のアカウントのパスワード
+EMAIL_USE_TLS = True
