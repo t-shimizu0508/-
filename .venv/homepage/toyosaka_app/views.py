@@ -11,10 +11,6 @@ from django.core.mail import EmailMessage
 class IndexView(TemplateView):
     template_name='index.html'
 
-class ContactView(FormView):
-    template_name='contact.html'
-    form_class =ContactForm
-    success_url=reverse_lazy('toyosaka_app:contact')
 
 class AchieveView(TemplateView):
     template_name='Achievements.html'
@@ -28,6 +24,10 @@ class info_View(TemplateView):
 class Recruitment(TemplateView):
     template_name='Recruitment.html'
 
+class ContactView(FormView):
+    template_name='contact.html'
+    form_class =ContactForm
+    success_url=reverse_lazy('toyosaka_app:contact')
     def form_valid(self, form):
         name=form.cleaned_data['name']
         email=form.cleaned_data['email']
