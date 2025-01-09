@@ -10,7 +10,7 @@ header {
     /* width: 980px; */
     margin: 0 auto;
     background-color: #bbbacef9;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
 }
 header h1{
