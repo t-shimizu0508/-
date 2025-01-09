@@ -24,7 +24,7 @@ header h1{
     color: #210c0c;
     text-decoration: none;
     position: relative;
-    transition: 0.3;
+    transition: 0.3s;
 }
 #global_navi a:visited {
     opacity: 0.7;
@@ -101,7 +101,7 @@ footer {
     position: relative;
     transition: 0.3;
 }
-#footer_navia:visited {
+#footer_navi a:visited {
     opacity: 0.7;
 }
 #footer_navi a::before {

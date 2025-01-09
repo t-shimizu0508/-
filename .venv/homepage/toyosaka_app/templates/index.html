@@ -1,15 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="jp">
   <head>
     <meta charset="UTF-8" />
     <title>豊栄鉄鋼</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
+{% block header %}
   <body>
     <header>
-      <h1><a href="index.html"><img src="images/logo.png" alt="豊栄鉄鋼ロゴ" ></a></h1>
+      <h1><a href="index.html"><img src={% static "images/logo.png" %} alt="豊栄鉄鋼ロゴ" ></a></h1>
       <nav id="global_navi">
         <ul>
           <li><a href="index.html">HOME</a></li>
@@ -21,6 +23,10 @@
         </ul>
       </nav>
     </header>
+{% endblock %}
+{% block content %}
+<h1>test</h1>
+{% endblock %}
     <footer>
       <div id="company_description">
         <p id="company">有限会社豊栄鉄鋼</p>
