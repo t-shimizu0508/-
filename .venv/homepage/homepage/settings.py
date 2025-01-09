@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'toyosaka_app.apps.ToyosakaAppConfig',
+    'toyosaka_app.apps.toyosakaAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -116,16 +116,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-DEFAULT_FROM_EMAIL = 'fko2347091@stu.o-hara.ac.jp' # 自分のメールアドレス
-EMAIL_HOST = 'smtp-mail.outlook.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'fko2347091@stu.o-hara.ac.jp' # 自分のメールアドレス
-EMAIL_HOST_PASSWORD = 'Sasami1101' # 自分のアカウントのパスワード
-EMAIL_USE_TLS = True
