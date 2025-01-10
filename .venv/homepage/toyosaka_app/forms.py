@@ -4,7 +4,7 @@ class ContactForm(forms.Form):
     name=forms.CharField(label='お名前')
     email=forms.EmailField(label='メールアドレス')
     title=forms.CharField(label='件名')
-    message=forms.CharField(label='メッセージ',widget=forms.Textarea)
+    message=forms.CharField(label='本文',widget=forms.Textarea)
 
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
@@ -15,5 +15,5 @@ class ContactForm(forms.Form):
         self.fields['email'].widget.attrs['class']='form-control'
         self.fields['title'].widget.attrs['placeholder']='タイトルを入力してください'
         self.fields['title'].widget.attrs['class']='form-control'
-        self.fields['message'].widget.attrs['placeholder']='メッセージを入力してください'
+        self.fields['message'].widget.attrs['placeholder']='本文を入力してください'
         self.fields['message'].widget.attrs['class']='form-control'
