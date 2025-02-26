@@ -2,37 +2,36 @@
 {% load static %}
 {% block title%}contact(仮置き){% endblock %}
 
-
 {% block contents %}
 <h1>お問い合わせ</h1>
-<!-- Main Content-->
-<main class="mb-4">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-                {% if messages %}
-                <ul class="list-unstyled" style="list-style: none;">
-                    {% for message in messages %}
-                    <li {%if message.tags %} class="{{message.tags}}"{% endif %}>
-                        {{message}}
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                <div class="my-5">
-                    <form method="post">
-                        {% csrf_token %}
-                        {% for field in form %}
-                        <div class="form-floating">
-                            <div class="form-group floating-label-form-group controls">
-                                {{field.label_tag}}
-                                {{field}}
-                                <p class="help-block tect-danger"></p>
-                            </div>
+<!-- Main Content -->
+<main>
+    <div>
+        <div>
+            {% if messages %}
+            <ul style="list-style: none;">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{message.tags}}"{% endif %}>
+                    {{message}}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <div>
+                <form method="post" class="modern-form">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div>
+                        <div>
+                            {{field.label_tag}}
+                            {{field}}
+                            <p></p>
                         </div>
-                        {% endfor %}
-                        <br>
-                        <button type="submit" class="btn btn-primary" id="sendMessageButton">送信</button>
-                    </form>
+                    </div>
+                    {% endfor %}
+                    <br>
+                    <button type="submit" id="sendMessageButton">送信</button>
+                </form>
             </div>
         </div>
     </div>

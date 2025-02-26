@@ -193,3 +193,37 @@ footer {
 #footer_navi ul li:first-child a:hover::after {
   transform: translateX(0);
 }
+
+/*contact*/
+.modern-form {
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+.modern-form div {
+  margin-bottom: 15px;
+}
+.modern-form input,
+.modern-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+}
+.modern-form button {
+  width: 100%;
+  padding: 12px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.modern-form button:hover {
+  background: #444;
+}
