@@ -227,3 +227,72 @@ footer {
 .modern-form button:hover {
   background: #444;
 }
+
+
+
+/* 会社概要エリア */
+.company-info {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.company-info h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #1e3c72;
+  letter-spacing: 2px;
+}
+
+.company-info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+
+.company-info th, .company-info td {
+  padding: 20px 30px;
+  text-align: left;
+  font-size: 22px;
+}
+
+.company-info th {
+  color: #1e3c72;
+  font-weight: bold;
+  width: 25%;
+  border-bottom: 3px solid #1e3c72;
+  background: rgba(30, 60, 114, 0.1);
+}
+
+.company-info td {
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.company-info tr:nth-child(even) td {
+  background: rgba(30, 60, 114, 0.05);
+}
+
+.company-info img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ご挨拶エリア */
+.greeting {
+  text-align: left;
+  font-size: 22px;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-left: 6px solid #1e3c72;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
