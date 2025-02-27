@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 
 app_name='toyosaka_app'
 
@@ -11,4 +15,4 @@ urlpatterns=[
     path('Company_info/',views.info_View.as_view(),name='info'),
     path('Recruitment/',views.Recruitment.as_view(),name='Recruitment'),
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
