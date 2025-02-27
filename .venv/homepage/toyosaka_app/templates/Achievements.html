@@ -5,8 +5,10 @@
 <div id="business">
   {% for service in services %}
   <div class="business-item">
+    <a href="{% url 'service_detail' service.pk %}">
     <img src="{{ service.image.url }}" alt="{{ service.title }}" width="480" height="275">
     <h3>{{ service.title }}</h3>
+    </a>
   </div>
   {% endfor %}
 </div>

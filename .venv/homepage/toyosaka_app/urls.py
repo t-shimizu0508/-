@@ -14,5 +14,6 @@ urlpatterns=[
     path('Business_content/',views.ContentView.as_view(),name='Business_content'),
     path('Company_info/',views.info_View.as_view(),name='info'),
     path('Recruitment/',views.Recruitment.as_view(),name='Recruitment'),
+    path('service/<int:pk>/',views.ServiceDetailView.as_view(), name='service_detail'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

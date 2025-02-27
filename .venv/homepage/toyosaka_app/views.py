@@ -6,10 +6,16 @@ from .forms import ContactForm
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from .models import Service
+from django.views.generic import DetailView
 
 # Create your views here.
 class IndexView(TemplateView):
     template_name='index.html'
+
+class ServiceDetailView(DetailView):
+    model = Service
+    template_name = 'service_detail.html'
+    context_object_name = 'service'  # テンプレートで使う変数名
 
 
 class AchieveView(TemplateView):
