@@ -58,6 +58,7 @@ header h1 img {
   gap: 20px; /* アイテム間の余白 */
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 #business div {
