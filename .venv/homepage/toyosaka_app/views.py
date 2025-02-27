@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from .forms import ContactForm
 from django.contrib import messages
 from django.core.mail import EmailMessage
-
+from .models import Service
 
 # Create your views here.
 class IndexView(TemplateView):
@@ -14,6 +14,11 @@ class IndexView(TemplateView):
 
 class AchieveView(TemplateView):
     template_name='Achievements.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['services'] = Service.objects.all()
+        return context
 
 class ContentView(TemplateView):
     template_name='Business_content.html'
