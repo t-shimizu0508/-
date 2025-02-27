@@ -376,3 +376,9 @@ footer {
     grid-template-columns: 1fr; /* スマホでは1列 */
   }
 }
+
+footer iframe {
+  width: 45%;
+  height: 270px;
+  border-radius: 10px;
+}
