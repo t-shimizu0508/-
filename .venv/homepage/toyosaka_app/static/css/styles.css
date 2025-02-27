@@ -382,3 +382,53 @@ footer iframe {
   height: 240px;
   border-radius: 10px;
 }
+
+
+#container {
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#container img {
+  width: 100%; /* コンテナの幅に合わせる */
+  max-width: 500px; /* 最大幅を設定 */
+  height: 300px; /* 高さを統一 */
+  object-fit: cover; /* 画像の比率を保ちつつトリミング */
+  display: block;
+  margin-bottom: 20px;
+}
+
+#container h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#container p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  text-align: left;
+  width: 90%;
+}
+
+#container a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+#container a:hover {
+  color: #0056b3;
+}
+
+
