@@ -296,3 +296,60 @@ footer {
   border-left: 6px solid #1e3c72;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
+
+/*事業の紹介（2列3行） */
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列 */
+  grid-template-rows: repeat(3, auto); /* 3行 */
+  gap: 40px; /* 要素間の余白 */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/*（枠なしデザイン） */
+.service-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* 画像のスタイル */
+.service-item img {
+  width: 100%;
+  height: 280px; /* 高さ統一 */
+  object-fit: cover;
+  border-radius: 20px; /* 角を丸く */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* ホバー時のアニメーション 
+.service-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}*/
+
+/* タイトル */
+.service-item h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #000000;
+}
+
+/* 説明文 */
+.service-item p {
+  font-size: 16px;
+  color: #0a0000;
+  margin-top: 5px;
+}
+
+/* スマホ対応（1列表示） */
+@media (max-width: 768px) {
+  .service-container {
+    grid-template-columns: 1fr; /* スマホでは1列 */
+  }
+}

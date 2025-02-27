@@ -1,5 +1,50 @@
 {% extends "base.html" %}
 {% load static %}
 {% block contents %}
-<h1>事業紹介</h1>
+<body>
+<main>
+  <h1 id="prac">事業紹介</h1>
+  <section class="service-section">
+      <div class="service-container">
+          <div class="service-item">
+              <img src="{% static 'images/gidam_rakusu.jpg' %}" alt="建築工事業">
+              <h2>建築工事業</h2>
+              <p class="en-title">Construction Work</p>
+              <p class="description">住宅・商業施設・公共施設などの建築を行い、耐久性とデザイン性を両立させた施工を提供します。</p>
+          </div>
+          <div class="service-item">
+              <img src="{% static 'images/gidam_rakusu.jpg' %}" alt="土木工事">
+              <h2>土木工事</h2>
+              <p class="en-title">Civil Engineering</p>
+              <p class="description">都市基盤やインフラの整備を担当し、安全で快適な生活環境の構築をサポートします。</p>
+          </div>
+          <div class="service-item">
+              <img src="{% static 'images/gidam_rakusu.jpg' %}" alt="道路工事">
+              <h2>道路工事</h2>
+              <p class="en-title">Road Construction</p>
+              <p class="description">道路の新設や舗装改修を行い、交通インフラの安全性と利便性を向上させます。</p>
+          </div>
+          <div class="service-item">
+              <img src="{% static 'images/gidam_rakusu.jpg' %}" alt="橋梁工事">
+              <h2>橋梁工事</h2>
+              <p class="en-title">Bridge Construction</p>
+              <p class="description">橋梁の新設・補修・耐震補強を手掛け、地域の交通を支える重要な工事を担います。</p>
+          </div>
+          <div class="service-item">
+              <img src="{% static 'images/gidam_rakusu.jpg' %}" alt="解体工事">
+              <h2>解体工事</h2>
+              <p class="en-title">Demolition Work</p>
+              <p class="description">安全かつ効率的な解体工事を実施し、リサイクルを考慮した環境負荷の少ない施工を行います。</p>
+          </div>
+          <div class="service-item">
+              <img src="{% static 'images/gidam_rakusu.jpg' %}" alt="トンネル工事">
+              <h2>トンネル工事</h2>
+              <p class="en-title">Tunnel Construction</p>
+              <p class="description">山岳部や都市部の地下インフラ整備のため、最新技術を駆使したトンネル工事を提供します。</p>
+          </div>
+      </div>
+  </section>
+</main>
+</body>
+
 {% endblock contents %}
