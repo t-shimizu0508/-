@@ -6,8 +6,14 @@ body, h1, h2, h3, p, ul, li {
   font-family: "Arial", sans-serif;
 }
 
+
+
 body {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
+  background-image: linear-gradient(45deg, 
+  #f0f0f0 33.3%,
+  #1e90ff 33.3% 66.6%, 
+  #f0f0f0 66.6% 100%  );
 }
 #home{
   opacity: 0;
@@ -161,20 +167,26 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
   align-items: flex-start;
+  gap: 50px;
 }
 
 #company_description {
   flex: 1;
-  min-width: 250px;
+  min-width: 300px;
 }
 
 #company {
   font-size: 22px;
   font-weight: bold;
-  /* margin-bottom: 15px; */
 }
+
+#footer_navi {
+  flex: 1;
+  min-width: 250px;
+}
+
+
 
 #footer_navi, .recent_posts {
   flex: 1;
@@ -194,12 +206,6 @@ footer {
   position: relative;
 }
 
-
-#footer_navi p{
-  font-size: 22px;
-  font-weight: bold;
-  /* margin-bottom: 15px; */
-}
 
 
 #footer_navi ul li a, .recent_posts ul li a {
@@ -253,6 +259,37 @@ footer {
 #footer_navi ul li:first-child a:hover::after {
   transform: translateX(0);
 }
+
+/* Googleマップのスタイル */
+footer iframe {
+  margin-top: 50px;
+  flex: 1;
+  width: 50%;
+  height: 240px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #company_description {
+    align-items: center;
+  }
+
+  footer iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+
+
 
 /*contact*/
 .modern-form {
@@ -414,11 +451,7 @@ footer {
   }
 }
 
-footer iframe {
-  width: 45%;
-  height: 240px;
-  border-radius: 10px;
-}
+
 
 
 #container {
