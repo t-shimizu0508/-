@@ -7,7 +7,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-  background-color: #000000;
+  background-color: #f0f0f0;
 }
 #home{
   opacity: 0;
@@ -173,7 +173,7 @@ footer {
 #company {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 #footer_navi, .recent_posts {
@@ -194,11 +194,19 @@ footer {
   position: relative;
 }
 
+
+#footer_navi p{
+  font-size: 22px;
+  font-weight: bold;
+  /* margin-bottom: 15px; */
+}
+
+
 #footer_navi ul li a, .recent_posts ul li a {
   text-decoration: none;
   color: #fff;
   transition: 0.3s;
-  font-weight: bold;
+  /* font-weight: bold; */
   display: block;
   padding: 5px 0;
   position: relative;
