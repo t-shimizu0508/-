@@ -130,9 +130,9 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FROM_EMAIL = 'fko2347091@stu.o-hara.ac.jp' # 自分のメールアドレス
+DEFAULT_FROM_EMAIL = 'example@stu.o-hara.ac.jp' # 自分のメールアドレス
 EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'fko2347091@stu.o-hara.ac.jp' # 自分のメールアドレス
-EMAIL_HOST_PASSWORD = 'Sasami1101' # 自分のアカウントのパスワード
+EMAIL_HOST_USER = 'example@stu.o-hara.ac.jp' # 自分のメールアドレス
+EMAIL_HOST_PASSWORD = 'example' # 自分のアカウントのパスワード
 EMAIL_USE_TLS = True
