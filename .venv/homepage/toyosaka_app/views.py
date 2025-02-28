@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.core.mail import EmailMessage
 from .models import Service
 from django.views.generic import DetailView
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 class IndexView(TemplateView):
@@ -47,10 +48,11 @@ class ContactView(FormView):
         subject= 'お問い合わせ:{}'.format(title)
 
         message = '送信者名:{0}\nメールアドレス:{1}\nタイトル:{2}\nメッセージ:\n{3}'.format(name,email,title,message)
-        from_email = 'fko2347091@stu.o-hara.ac.jp'
-        to_list =['fko2347091@stu.o-hara.ac.jp']
+        from_email = 'example@stu.o-hara.ac.jp'
+        to_list =['example@stu.o-hara.ac.jp']
 
         message =EmailMessage(subject=subject,body=message,from_email=from_email,to=to_list)
-        message.send()
-        messages.success(self.request,'お問い合わせは正常に送信されました')
-        return super().form_valid(form)
+        # message.send()
+        messages.success(self.request,'お問い合わせは正常に送信されまたことにしました')
+        # return super().form_valid(form)
+        return HttpResponseRedirect(self.success_url)
