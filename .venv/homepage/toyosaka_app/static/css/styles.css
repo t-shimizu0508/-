@@ -339,7 +339,7 @@ footer iframe {
 /* 会社概要エリア */
 #company_profile{
   background: #f4f4f4;
-  border-radius: 50px 20px;
+  /* border-radius: 20px; */
 }
 
 
