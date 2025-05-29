@@ -639,3 +639,45 @@ footer iframe {
   background-color: #2980b9;
 }
 
+.contact-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff !important;;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #6b6969 !important; /* 初期背景を灰色に */
+  transition: color 0.3s ease;
+}
+
+.contact-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(21, 79, 167); /* スライドしてくる青色 */
+  transition: left 0.4s ease;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+.contact-link:hover::before {
+  left: 0;
+}
+
+.contact-link span {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover span {
+  transform: rotateX(360deg); /* 不要なら削除OK */
+}
+
+.contact-link:hover {
+  color: white;
+}
