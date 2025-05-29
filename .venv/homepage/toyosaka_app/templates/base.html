@@ -29,6 +29,29 @@
     {% block contents %}
     
     {% endblock %}
+    <!-- トップに戻るボタン -->
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑ トップへ</button>
+
+  <script>
+    // スクロール時にボタンの表示/非表示を制御
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // トップに戻る
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
     <footer>
       <div id="company_description">
         <p id="company">見本土木株式会社</p>
