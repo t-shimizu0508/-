@@ -30,16 +30,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+
   background-color: #fff
 }
+#global_navi{
+  display: block;
+}
 #global_navi a {
-  display: inline-block;
-  padding: 10px 20px;
+  display: flex;
   text-decoration: none; 
   color: #333; 
   background-color: rgba(0,0,0,0); 
-  border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 #global_navi a span {
@@ -55,22 +56,21 @@ header {
   transform: rotateX(360deg);
 }
 header h1 img {
+  
   height: 65px;
 }
 
 #global_navi ul {
-  display: flex;
+  display: flex; 
 }
 
-#global_navi ul li {
-  margin-left: 20px;
-}
+
 
 #global_navi ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 25px 15px;
   transition: 0.3s;
 }
 
@@ -646,7 +646,7 @@ footer iframe {
   color: #ffffff !important;;
   text-decoration: none;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0 !important;
   background-color: #6b6969 !important; /* 初期背景を灰色に */
   transition: color 0.3s ease;
 }
@@ -658,26 +658,21 @@ footer iframe {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgb(21, 79, 167); /* スライドしてくる青色 */
+  background: linear-gradient(to right, #144fc3, #20a2ff); /* 青系のグラデーション */
   transition: left 0.4s ease;
   z-index: 0;
-  border-radius: 8px;
+
 }
 
 .contact-link:hover::before {
   left: 0;
 }
 
-.contact-link span {
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.contact-link:hover span {
-  transform: rotateX(360deg); /* 不要なら削除OK */
-}
-
 .contact-link:hover {
   color: white;
+}
+
+/* 回転を無効化するクラス */
+.no-rotate span {
+  transition: none !important;
 }
