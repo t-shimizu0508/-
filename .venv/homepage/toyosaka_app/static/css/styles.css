@@ -617,23 +617,22 @@ footer iframe {
   text-align: center;
 }
 
-
-/* トップに戻るボタンのスタイル */
 #scrollTopBtn {
-  display: none; /* 初期は非表示 */
-  position: fixed; /* 画面に固定 */
-  bottom: 20px;     /* 画面下から20px */
-  right: 20px;      /* 画面右から20px */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   z-index: 1000;
-  font-size: 18px;
+  width: 50px;
+  height: 50px;
   background-color: #3498db;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 50%; /* 丸くする */
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease;
+  font-size: 20px; /* アイコンサイズ */
+  transition: background-color 0.3s ease;
 }
 
 #scrollTopBtn:hover {
