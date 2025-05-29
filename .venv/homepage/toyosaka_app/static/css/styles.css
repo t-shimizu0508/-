@@ -335,7 +335,7 @@ footer iframe {
 
 .modern-form input::placeholder,
 .modern-form textarea::placeholder {
-  color: #f0f0f0;
+  color: #888;
   font-style: italic;
   font-family: 'Yu Gothic', sans-serif;
 }
@@ -638,3 +638,4 @@ footer iframe {
 #scrollTopBtn:hover {
   background-color: #2980b9;
 }
+
