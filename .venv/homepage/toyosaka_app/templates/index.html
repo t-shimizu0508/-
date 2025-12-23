@@ -2,14 +2,32 @@
 {% load static %}
 {% block title%}トップページ{% endblock %}
 {% block contents %}
-<body id=home>
-<div class="video-container">
-    <iframe 
-        src="https://www.youtube.com/embed/XHEEo4H3XIQ" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
+<body id="home">
+    <div class="hero-image">
+        <img src="{% static 'images/IMG_0349.jpg' %}" alt="メインビジュアル">
+            {% comment %} <div class="hero-text">
+                <h1>豊栄鉄工</h1>
+                <p>確かな技術で、信頼されるものづくりを。</p>
+        </div> {% endcomment %}
 </div>
+    <section class="greeting">
+    <h2 class="section-title">- ご挨拶 -</h2>
+        <p class="greeting-text">
+            このたびは、豊栄鉄工のホームページをご覧いただき、誠にありがとうございます。
+
+私たち豊栄鉄工は、鉄骨製作を中心に、製缶・溶接・機械加工など、ものづくりの現場に真摯に向き合いながら歩んでまいりました。
+一本一本の鋼材、一つひとつの溶接に「安全・品質・信頼」を込めることが、私たちの変わらぬ使命です。
+
+鉄は、建物や設備の骨となり、人々の暮らしや産業を支える存在です。
+だからこそ私たちは、目に見えない部分にも決して妥協せず、確かな技術と責任ある仕事でお応えすることを大切にしています。
+
+これからも技術の研鑽を怠ることなく、時代の変化に柔軟に対応しながら、
+「任せてよかった」と言っていただける会社であり続けられるよう、社員一同努力してまいります。
+
+今後とも、豊栄鉄工をどうぞよろしくお願い申し上げます。
+        </p>
+</section>
+
 </body>
 
 {% endblock contents %}

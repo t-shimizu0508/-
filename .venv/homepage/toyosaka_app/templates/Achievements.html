@@ -6,14 +6,32 @@
   <p>実績紹介</p>
   <h1>WORKS</h1>
 </section>
-<div id="business">
+<div class="business-list">
   {% for service in services %}
-  <div class="business-item">
-    <a href="{% url 'toyosaka_app:service_detail' pk=service.pk %}">
-    <img src="{{ service.image.url }}" alt="{{ service.title }}" width="480" height="275">
-    <h3>{{ service.title }}</h3>
-    </a>
-  </div>
+    <div class="business-item">
+      <a href="{% url 'toyosaka_app:service_detail' pk=service.pk %}" class="business-link">
+
+        <!-- 画像（上） -->
+        <div class="business-image">
+          <img src="{{ service.image.url }}" alt="{{ service.title }}">
+        </div>
+
+        <!-- 説明（下） -->
+        <div class="business-text">
+          <h3 class="business-title">{{ service.title }}</h3>
+
+          {% if service.description %}
+            <p class="business-description">
+              {{ service.description|truncatechars:40 }}
+            </p>
+          {% endif %}
+        </div>
+
+      </a>
+    </div>
   {% endfor %}
 </div>
+
+
+
 {% endblock contents %}

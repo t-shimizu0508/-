@@ -5,11 +5,11 @@
 </head>
 <body>
     <div id="container">
-        <img src="{{ service.image.url }}" alt="{{ service.title }}">
-        <h1>{{ service.title }}</h1>
-        <p>{{ service.description }}</p>
-        <a href="{% url 'toyosaka_app:achievements'%}">← 一覧に戻る</a>
-    </div>
+    <h1>{{ service.title }}</h1>
+    <img src="{{ service.image.url }}" alt="{{ service.title }}">
+    <p>{{ service.description }}</p>
+    <a href="{% url 'toyosaka_app:achievements'%}">← 一覧に戻る</a>
+</div>
 </body>
 </html>
 {% endblock contents %}
