@@ -30,52 +30,75 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background-color: #fff
+  background-color: #fff;
 }
-#global_navi{
+
+/* ロゴ */
+header h1 img {
+  height: 65px;
+}
+
+/* ナビ */
+#global_navi {
   display: block;
 }
-#global_navi a {
+
+#global_navi ul {
   display: flex;
-  text-decoration: none; 
-  color: #333; 
-  background-color: rgba(0,0,0,0); 
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* ナビリンク */
+#global_navi ul li a {
+  position: relative;            /* ★ 下線用 */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 25px 15px;
+  background-color: rgba(0,0,0,0);
+  transition: color 0.3s ease;
+}
+
+/* 下線（最初は見えない） */
+#global_navi ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(21, 79, 167);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* hover時 */
+/* #global_navi ul li a:hover {
+  color: rgb(21, 79, 167);
+} */
+
+/* hoverで下線出現 */
+#global_navi ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* spanアニメーション（そのまま維持） */
 #global_navi a span {
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
-#global_navi a:hover {
-  background-color: rgb(21, 79, 167);
-  color: white;
-}
 #global_navi a:hover span {
   transform: rotateX(360deg);
 }
-header h1 img {
-  
-  height: 65px;
-}
 
-#global_navi ul {
-  display: flex; 
-}
-
-
-
-#global_navi ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 25px 15px;
-  transition: 0.3s;
-}
-
-#global_navi ul li a:hover {
-  color: #fff;
+/* 下余白 */
+#prac {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 #prac{
@@ -86,7 +109,7 @@ header h1 img {
 
 
 .main_head {
-  background: linear-gradient(to right, #014674, #1c9bd1); 
+  background: linear-gradient(to right, #014674, #3bb4e5);
   /* background: linear-gradient(to right, #144fc3, #20a2ff); */
   padding: 80px 0;
   text-align: center;
@@ -109,7 +132,7 @@ header h1 img {
 
 /* フッター */
 footer {
-  background-color: rgb(21, 79, 167);
+  background-color: rgb(1, 36, 90);
   color: #fff;
   padding: 50px 5%;
   display: flex;
@@ -134,8 +157,6 @@ footer {
   min-width: 250px;
 }
 
-
-
 #footer_navi, .recent_posts {
   flex: 1;
   min-width: 250px;
@@ -150,73 +171,52 @@ footer {
 
 #footer_navi ul li, .recent_posts ul li {
   margin: 8px 0;
-  overflow: hidden;
   position: relative;
 }
 
-
-
-#footer_navi ul li a, .recent_posts ul li a {
+/* リンク */
+#footer_navi ul li a {
   text-decoration: none;
   color: #fff;
-  transition: 0.3s;
-  /* font-weight: bold; */
-  display: block;
-  padding: 5px 0;
+  display: inline-block;
+  padding: 4px 0;
   position: relative;
+  transition: color 0.3s ease;
+  font-weight: bold; 
 }
 
-#footer_navi ul li a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: 0.5s;
-}
 
-#footer_navi ul li a:hover::before {
-  left: 0;
-}
-
+/* hover時 */
 #footer_navi ul li a:hover {
   color: #ffef44;
-  text-decoration: underline;
 }
 
-/* HOME セクションにブラインドエフェクト */
-#footer_navi ul li:first-child a {
-  position: relative;
-  overflow: hidden;
+/* 下線が出る */
+#footer_navi ul li a:hover::after {
+  transform: scaleX(1);
 }
 
-#footer_navi ul li:first-child a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(234, 184, 184, 0.1);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-#footer_navi ul li:first-child a:hover::after {
-  transform: translateX(0);
-}
 
 /* Googleマップのスタイル */
 footer iframe {
-  margin-top: 50px;
+  margin-top: 30px;
   flex: 1;
   width: 50%;
   height: 240px;
   border-radius: 6px;
   border: none;
 }
+
+#copyright {
+  width: 100%;              /* 横いっぱい使う */
+  margin-top: 40px;         /* 上との余白 */
+  padding-top: 20px;
+  text-align: center;       /* 中央寄せ */
+  font-size: 14px;
+  color: #ccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 
 /* スマホ対応 */
 @media screen and (max-width: 768px) {
@@ -282,12 +282,12 @@ footer iframe {
 }
 
 .company-profile {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
 }
@@ -411,12 +411,6 @@ footer iframe {
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* ホバー時のアニメーション 
-.service-item:hover img {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-}*/
-
 /* タイトル */
 .service-item h2 {
   font-size: 22px;
@@ -535,7 +529,7 @@ footer iframe {
   z-index: 1000;
   width: 50px;
   height: 50px;
-  background-color: #3498db;
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 50%; /* 丸くする */
@@ -545,9 +539,9 @@ footer iframe {
   transition: background-color 0.3s ease;
 }
 
-#scrollTopBtn:hover {
-  background-color: #2980b9;
-}
+/* #scrollTopBtn:hover {
+  background-color: #00059a;
+} */
 
 .contact-link {
   position: relative;
@@ -576,6 +570,10 @@ footer iframe {
 
 .contact-link:hover::before {
   left: 0;
+}
+
+.contact-link:hover::after {
+  display: none;
 }
 
 .contact-link:hover {
@@ -715,39 +713,19 @@ footer iframe {
 .hero-image {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
 }
 
-/* 画像そのもの */
-.hero-image img {
+.hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* 文字を重ねる */
-.hero-text {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 16px;
-}
 
-.hero-text p {
-  font-size: 18px;
-}
 
 
 .greeting {
@@ -784,4 +762,225 @@ footer iframe {
   font-size: 16px;
   line-height: 2;
   color: #333;
+}
+
+
+/* 募集要項のセクション */
+.recruit-cta {
+  background: #f7f7f7;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* サブ文 */
+.cta-sub {
+  color: #9aa7b1;
+  margin-bottom: 16px;
+}
+
+/* タイトル */
+.cta-title {
+  font-size: 36px;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+/* 中身 */
+.cta-box {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:40px;
+}
+
+/* 電話 */
+.cta-tel {
+  text-align: left;
+}
+
+.tel-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.tel-time {
+  font-size: 14px;
+  color: #555;
+}
+
+/* メールボタン */
+.cta-mail {
+  background: #2f77b4;
+  color: #fff;
+  padding: 30px 80px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: background 0.3s;
+  line-height: 1.4;
+}
+
+.cta-mail span {
+  font-size: 16px;
+}
+
+.cta-mail:hover {
+  background: #255f8e;
+}
+
+
+/* サービス画像 全体 */
+.service-images-main {
+  display: flex;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+/* 各サービス */
+.service-item-main {
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+/* 画像 */
+.service-item-main img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* タイトル */
+.service-item-main h3 {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 0.05em;
+}
+
+/* 下ラインを消す（念のため） */
+.service-item-main h3::after {
+  display: none;
+}
+
+/* 事業セクション全体 */
+.business-section-main {
+  background-color: #f3f6f9;
+  padding: 80px 5%;
+}
+
+/* 事業セクション 見出し */
+.business-title-main {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.business-title-main h2 {
+  font-size: 36px;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  color: #014674;
+}
+
+.business-title-main p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 事業紹介リンク */
+.business-link-main {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.business-link-main a {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 2px solid #014674;
+  color: #014674;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.business-link-main a:hover {
+  background-color: #014674;
+  color: #fff;
+}
+
+
+/* セクション全体 */
+.info-recruit-section-main {
+  display: flex;
+  gap: 40px;
+  padding: 80px 5%;
+}
+
+/* 共通ブロック */
+.info-box-main {
+  width: 50%;
+  min-height: 420px;
+  padding: 50px 40px;
+  background-color: #f3f6f9;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 英語タイトル */
+.info-title-en-main {
+  font-size: 32px;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  color: #014674;
+  margin-bottom: 10px;
+}
+
+/* 日本語タイトル */
+.info-title-jp-main {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 説明文 */
+.info-description-main {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: auto;
+}
+
+/* リンクボタン */
+.info-link-main {
+  align-self: flex-start;
+  padding: 12px 30px;
+  border: 2px solid #014674;
+  border-radius: 999px;
+  color: #014674;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.info-link-main:hover {
+  background-color: #014674;
+  color: #fff;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+  .info-recruit-section-main {
+    flex-direction: column;
+  }
+
+  .info-box-main {
+    width: 100%;
+  }
 }

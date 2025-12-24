@@ -4,11 +4,15 @@
 {% block contents %}
 <body id="home">
     <div class="hero-image">
-        <img src="{% static 'images/IMG_0349.jpg' %}" alt="メインビジュアル">
-            {% comment %} <div class="hero-text">
-                <h1>豊栄鉄工</h1>
-                <p>確かな技術で、信頼されるものづくりを。</p>
-        </div> {% endcomment %}
+<video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline>
+    <source src="{% static 'videos/IMG_2802.mp4' %}" type="video/mp4">
+</video>
+
 </div>
     <section class="greeting">
     <h2 class="section-title">- ご挨拶 -</h2>
@@ -27,6 +31,64 @@
 今後とも、豊栄鉄工をどうぞよろしくお願い申し上げます。
         </p>
 </section>
+
+<section class="business-section-main">
+
+  <div class="business-title-main">
+    <h2>BUSINESS</h2>
+    <p>事業紹介</p>
+  </div>
+
+  <div class="service-images-main">
+    <div class="service-item-main">
+      <img src="{% static 'images/IMG_0349.jpg' %}" alt="建築工事業">
+      <h3>建築工事業</h3>
+    </div>
+
+    <div class="service-item-main">
+      <img src="{% static 'images/dce2431eaae40e1d.jpg' %}" alt="鉄骨製作">
+      <h3>鉄骨製作</h3>
+    </div>
+
+    <div class="service-item-main">
+      <img src="{% static 'images/IMG_2507.jpg' %}" alt="鉄骨組立工事">
+      <h3>鉄骨組立工事</h3>
+    </div>
+  </div>
+
+  <div class="business-link-main">
+    <a href="{% url 'toyosaka_app:Business_content' %}">
+      事業内容を見る →
+    </a>
+  </div>
+
+</section>
+
+<section class="info-recruit-section-main">
+
+  <div class="info-box-main company-box-main">
+    <h2 class="info-title-en-main">COMPANY</h2>
+    <p class="info-title-jp-main">企業情報</p>
+    <p class="info-description-main">
+      豊栄鉄工は、確かな技術と誠実なものづくりで
+      地域社会に貢献する鉄工会社です。
+    </p>
+    <a href="#" class="info-link-main">企業情報を見る →</a>
+  </div>
+
+  <div class="info-box-main recruit-box-main">
+    <h2 class="info-title-en-main">RECRUIT</h2>
+    <p class="info-title-jp-main">採用情報</p>
+    <p class="info-description-main">
+      若い力を求めています。
+      未経験からでも成長できる環境を整えています。
+    </p>
+    <a href="#" class="info-link-main">募集要項を見る →</a>
+  </div>
+
+</section>
+
+
 
 </body>
 
